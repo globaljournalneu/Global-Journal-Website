@@ -23,17 +23,15 @@
     "@eslint/js": "^9.8.0",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
-    "@nrwl/nest": "^19.8.4",
-    "@nrwl/react": "^19.8.4",
     "@nx/eslint": "20.0.5",
     "@nx/eslint-plugin": "20.0.5",
     "@nx/jest": "20.0.5",
     "@nx/js": "20.0.5",
-    "@nx/nest": "19.8.4",
+    "@nx/nest": "20.0.5",
     "@nx/next": "20.0.5",
-    "@nx/node": "19.8.4",
-    "@nx/react": "19.8.4",
-    "@nx/vite": "19.8.4",
+    "@nx/node": "20.0.5",
+    "@nx/react": "20.0.5",
+    "@nx/vite": "20.0.5",
     "@nx/web": "20.0.5",
     "@nx/webpack": "20.0.5",
     "@nx/workspace": "20.0.5",
@@ -69,9 +67,9 @@
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",
     "typescript": "~5.5.2",
-    "typescript-eslint": "^8.0.0",
     "vite": "^5.0.0",
     "vitest": "^1.3.1",
     "webpack-cli": "^5.1.4"
   }
+  
 }
