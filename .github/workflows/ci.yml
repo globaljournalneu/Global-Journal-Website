@@ -23,12 +23,6 @@ jobs:
           node-version: 18  # Downgraded to Node.js 18 LTS
           cache: 'yarn'
 
-      # Install Yarn
-      - run: corepack enable  # Ensure Yarn is enabled
-
-      # Clean Yarn cache
-      - run: yarn cache clean
-
       # Install dependencies using Yarn
       - run: yarn install --check-files
 
