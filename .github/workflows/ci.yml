@@ -13,6 +13,9 @@ permissions:
 jobs:
   main:
     runs-on: ubuntu-latest
+    resources:
+      limits:
+        memory: 8GB
     steps:
       - uses: actions/checkout@v4
         with:
