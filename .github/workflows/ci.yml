@@ -13,6 +13,7 @@ permissions:
 jobs:
   main:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -20,16 +21,14 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 18  # Downgraded to Node.js 18 LTS
+          node-version: 22.9  # Set Node.js version to 22.9
           cache: 'yarn'
 
       # Install dependencies using Yarn
-      - run: yarn install --check-files
+      - run: yarn install --check-files --force
 
       # Set Nx SHAs for the workspace
       - uses: nrwl/nx-set-shas@v4
 
       # Run Nx tasks with lint, test, and build
       - run: npx nx affected -t lint test build
-
-      
