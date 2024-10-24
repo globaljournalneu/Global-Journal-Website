@@ -13,30 +13,22 @@ permissions:
 jobs:
   main:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Set up Node.js environment and enable yarn caching
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22.9  # Set Node.js version to 22.9
           cache: 'yarn'
 
-      # Install Yarn
-      - run: corepack enable  # Ensure Yarn is enabled
-
-      # Clean Yarn cache
-      - run: yarn cache clean
-
       # Install dependencies using Yarn
-      - run: yarn install --check-files
+      - run: yarn install --check-files --force
 
       # Set Nx SHAs for the workspace
       - uses: nrwl/nx-set-shas@v4
 
       # Run Nx tasks with lint, test, and build
       - run: npx nx affected -t lint test build
-
-      
